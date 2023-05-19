@@ -23,5 +23,7 @@ USAGE
 
 Add the following bot as admin of your channel https://t.me/AffiliateAmaBot.
 
-To start the application type the command python3 mainGui.py
+To start the application type the command python3 mainGui.py.
+
+The bot publishes about 800 products on the channel.Once started, the button will no longer be clickable until the products are published. Do not close the application while it is sending messages on the Telegram Channel.
 

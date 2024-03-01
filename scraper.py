@@ -42,7 +42,7 @@ def scrapingProducts(URL):
 
         elements = soup2.findAll('div', class_='sg-col-4-of-24 sg-col-4-of-12 s-result-item s-asin sg-col-4-of-16 sg-col s-widget-spacing-small sg-col-4-of-20')
 
-        for element in elements:
+        for element in elements[:2]:
             title = element.find('span', class_='a-size-base-plus a-color-base a-text-normal')
             link = element.find('a', class_='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal').get('href')
             price = element.find('span', class_='a-price-whole')

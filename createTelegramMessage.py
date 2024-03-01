@@ -15,7 +15,7 @@ async def createTelegramMessage():
             try:
                 sleep(3)
                 title = line[0]
-                price = line[1]
+                price = line[1].replace(" ", "")
                 firstPrice = line[2]
                 image = line[4]
                 star = line[5]
@@ -56,7 +56,7 @@ def replaceAffiliateLink():
                 star = line[5]
                 dpPosition = link.find('dp')
                 productCode = re.search(r'(?:dp\/[\w]*)|(?:gp\/product\/[\w]*)', link[dpPosition:].split(" ")[0])
-                finalLink = constant.baseURL + productCode.group(0).__str__() + constant.URLaffiliateelement + constant.affiliateCode + constant.URLfinalelement
+                finalLink = constant.baseURL + productCode.group(0).__str__() + constant.URLAffiliateElement + constant.affiliateCode + constant.URLfinalElement
                 data = [title, price, firstPrice, link, image, star, finalLink]
                 writer.writerow(data)
             except Exception as e:
